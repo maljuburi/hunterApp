@@ -420,7 +420,8 @@ module.exports.metadata =
     "cordova-plugin-globalization": "1.0.7",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-plugin-network-information": "1.3.3",
-    "cordova-plugin-vibration": "2.1.5"
+    "cordova-plugin-vibration": "2.1.5",
+    "cordova-plugin-whitelist": "1.3.2"
 }
 // BOTTOM OF METADATA
 });

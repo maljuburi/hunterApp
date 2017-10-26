@@ -3,3 +3,292 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+  height: 100%;
+}
+
+
+@font-face {
+  font-family: 'ghost-font';
+  src: url('../res/fonts/ShadowsIntoLight.ttf') format('truetype')
+}
+
+
+/*===================
+  Splash Screen
+==================*/
+
+body {
+  height: 100%;
+  background:#161616;
+  font-family: 'ghost-font', cursive;
+  color: red;
+}
+
+.center{
+  text-align: center;
+}
+
+.text-shadow{
+  text-shadow: 0 0 10px black;
+}
+
+.welcome{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+/*content page
+================*/
+
+.btn{
+  display: block;
+  margin: 1em auto;
+  width: 8em;
+  height: 8em;
+  outline: none;
+  border: none;
+  padding: 1em 2em;
+  color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+  background: #303030; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(rgba(30, 30, 30, 1) 50%, rgba(66, 66, 66, 1)); /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(rgba(30, 30, 30, 1) 50%, rgba(66, 66, 66, 1)); /* For Opera 11.6-12.0 */
+  background: -moz-radial-gradient(rgba(30, 30, 30, 1) 50%, rgba(66, 66, 66, 1)); /* For Firefox 3.6-15 */
+  background: radial-gradient(rgba(30, 30, 30, 1) 50%, rgba(66, 66, 66, 1)); /* Standard syntax */
+}
+
+.btn:active{
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(rgba(100, 0, 0, 1) 50%, rgba(66, 66, 66, 1)); /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(rgba(100, 0, 0, 1) 50%, rgba(66, 66, 66, 1)); /* For Opera 11.6-12.0 */
+  background: -moz-radial-gradient(rgba(100, 0, 0, 1) 50%, rgba(66, 66, 66, 1)); /* For Firefox 3.6-15 */
+  background: radial-gradient(rgba(100, 0, 0, 1) 50%, rgba(66, 66, 66, 1)); /* Standard syntax */
+  color: white;
+}
+
+
+
+
+
+/*Cam Page*/
+
+.cam,
+.flash,
+.compass{
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cam img{
+  position: absolute;
+  width: 225px;
+  height: auto;
+}
+
+.cam img:nth-of-type(1){
+ z-index: 5;
+ box-shadow: 0 0 20px black;
+ border-radius: 50%;
+ animation: rotate-360 20s linear infinite;
+}
+
+.cam img:nth-of-type(2){
+ z-index: 4;
+ border-radius: 50%;
+ width: 200px;
+ height: auto;
+}
+
+
+/*Flash Page*/
+
+.flash img{
+  width: 225px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black;
+}
+
+
+/*Compage Page*/
+
+.compass img{
+  width: 225px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black;
+}
+
+
+
+.eye {
+  height:30px;
+  width:20%;
+  max-width:100px;
+  background:red;
+  position:relative;
+  box-shadow:0px 0px 20px red;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation:glow 8s ease-in-out infinite;
+  -moz-animation: glow 8s ease-in-out infinite;
+  -o-animation: glow 8s ease-in-out infinite;
+  animation: glow 8s ease-in-out infinite;
+}
+
+.eye:nth-of-type(1) {
+  border-radius:5% 75% 0 100%;
+  left: -5px;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.eye:nth-of-type(2) {
+  border-radius:75% 5% 100% 0;
+  right:-5px;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+
+
+@-webkit-keyframes glow {
+  0%   { opacity: .8; box-shadow:0px 0px 20px red; height:30px;}
+  20% { opacity: 1; box-shadow:0px 0px 40px red; height:35px; }
+  30% { opacity: 1; box-shadow:0px 0px 40px red; height:5px; }
+  35% { opacity: 1; box-shadow:0px 0px 40px red; height:30px;}
+  75% { opacity: 1; box-shadow:0px 0px 30px red; height:35px; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes glow {
+  0%   { opacity: .8; box-shadow:0px 0px 20px red; height:30px;}
+  20% { opacity: 1; box-shadow:0px 0px 40px red; height:35px; }
+  30% { opacity: 1; box-shadow:0px 0px 40px red; height:5px; }
+  35% { opacity: 1; box-shadow:0px 0px 40px red; height:30px;}
+  75% { opacity: 1; box-shadow:0px 0px 30px red; height:35px; }
+  100% { opacity: .8; }
+}
+@-o-keyframes glow {
+  0%   { opacity: .8; box-shadow:0px 0px 20px red; height:30px;}
+  20% { opacity: 1; box-shadow:0px 0px 40px red; height:35px; }
+  30% { opacity: 1; box-shadow:0px 0px 40px red; height:5px; }
+  35% { opacity: 1; box-shadow:0px 0px 40px red; height:30px;}
+  75% { opacity: 1; box-shadow:0px 0px 30px red; height:35px; }
+  100% { opacity: .8; }
+}
+@keyframes glow {
+  0%   { opacity: .8; box-shadow:0px 0px 20px red; height:30px;}
+  20% { opacity: 1; box-shadow:0px 0px 40px red; height:35px; }
+  30% { opacity: 1; box-shadow:0px 0px 40px red; height:5px; }
+  35% { opacity: 1; box-shadow:0px 0px 40px red; height:30px;}
+  75% { opacity: 1; box-shadow:0px 0px 30px red; height:35px; }
+  100% { opacity: .8; }
+}
+
+
+
+/*===============
+  Ring Animation
+======================*/
+
+.demon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.loader-ring {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+
+.loader-ring-light {
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 4px 0 #00abf2 inset;
+  -webkit-box-shadow: 0 4px 0 #00abf2 inset;
+  box-shadow: 0 4px 0 red inset;
+  animation: rotate-360 2s linear infinite;
+}
+
+.loader-ring-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+@keyframes rotate-360 {
+  from {
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*==============
+  Loading Text
+=================*/
+
+.loading h3{
+  font-family: 'ghost-font', cursive;
+  position: absolute;
+  text-align: center;
+  top: 75%;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  animation: loading 2s ease-in-out infinite;
+}
+
+
+
+@keyframes loading {
+  0%   { opacity: .5; text-shadow:0px 0px 10px red;}
+  50% { opacity: 1; text-shadow:0px 0px 20px red;}
+  100% { opacity: .5; text-shadow:0px 0px 10px red; }
+}
