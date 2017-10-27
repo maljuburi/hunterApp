@@ -11,7 +11,7 @@ html{
 
 @font-face {
   font-family: 'ghost-font';
-  src: url('../res/fonts/ShadowsIntoLight.ttf') format('truetype')
+  src: url('fonts/ShadowsIntoLight.ttf') format('truetype')
 }
 
 
