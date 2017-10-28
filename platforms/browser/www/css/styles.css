@@ -28,12 +28,7 @@ body {
   text-shadow: 0 0 10px black;
 }
 
-.welcome {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-}
+
 
 
 /*==========================================
@@ -75,18 +70,21 @@ Camera Page
 .cam,
 .flash,
 .compass {
-  height: 50%;
   display: block;
+  position: relative;
+   height: 220px;
 }
 
-.cam img {
-  position: absolute;
-  width: 225px;
-  height: auto;
-}
 
 .cam img:nth-of-type(1) {
   z-index: 5;
+  position: absolute;
+  margin-left: -110px;
+  margin-top: -60px;
+  left: 50%;
+  top: 60px;
+  width: 220px;
+  height: auto;
   box-shadow: 0 0 20px black;
   border-radius: 50%;
   -webkit-animation: rotate-360 20s linear infinite;
@@ -95,11 +93,23 @@ Camera Page
 
 .cam img:nth-of-type(2) {
   z-index: 4;
-  border-radius: 50%;
-  width: 200px;
+  position: absolute;
+  margin-left: -90px;
+  left: 50%;
+  top: 60px;
   height: auto;
+  border-radius: 50%;
+  width: 180px;
 }
 
+.myImage{
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
 
 /*==========================================
 ###############################################
@@ -108,7 +118,11 @@ Flash Page
 ===============================================*/
 
 .flash img {
-  width: 225px;
+  position: absolute;
+  width: 220px;
+  margin-left: -110px;
+  left: 50%;
+  top: 0;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 0 20px black;
@@ -122,7 +136,11 @@ Compass Page
 ===============================================*/
 
 .compass img {
-  width: 225px;
+  position: absolute;
+  width: 220px;
+  margin-left: -110px;
+  left: 50%;
+  top: 0;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 0 20px black;
@@ -131,16 +149,17 @@ Compass Page
 
 /*==========================================
 ###############################################
-  Splash Screen
+  Splash Screen EYES
 ###############################################
 =============================================*/
 
 .eye {
   height: 30px;
-  width: 20%;
-  max-width: 100px;
+  width: 80px;
   background: red;
-  position: relative;
+  position: absolute;
+  left: 51%;
+  top: 40%;
   box-shadow: 0px 0px 20px red;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -150,14 +169,13 @@ Compass Page
 
 .eye:nth-of-type(1) {
   border-radius: 5% 75% 0 100%;
-  left: -5px;
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
+  margin-left: -100px;
 }
 
 .eye:nth-of-type(2) {
   border-radius: 75% 5% 100% 0;
-  right: -5px;
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
@@ -225,28 +243,28 @@ Compass Page
 }
 
 
-/*===============
-  Ring Animation
-======================*/
+/*==========================================
+###############################################
+  Splash Screen Ring
+###############################################
+=============================================*/
 
-.demon {
-  display: flex;
-  display: -webkit-flex;
-  height: 100%;
-  align-items: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  -webkit-justify-content: center;
+.welcome {
+  display: block;
+  padding: 1em 0;
 }
 
-.relative {
+.demon {
+  height: 250px;
   position: relative;
+  margin: 3em 0;
 }
 
 .loader-ring {
-  position: absolute;
   width: 250px;
   height: 250px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .loader-ring-light {
@@ -302,12 +320,7 @@ Compass Page
 =================*/
 
 .loading h3 {
-  font-family: 'ghost-font', cursive;
-  position: absolute;
   text-align: center;
-  top: 75%;
-  left: 0;
-  right: 0;
   text-transform: uppercase;
   animation: loading 2s ease-in-out infinite;
   -webkit-animation: loading 2s ease-in-out infinite;
